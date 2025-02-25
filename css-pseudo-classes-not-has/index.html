@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Oktay Acar" />
+    <title>CSS Pseudo-Classes: :not() and :has() Filters</title>
+
+    <!-- Font Awesome 6.7.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <h1 class="page-title">
+      CSS Pseudo-Classes:
+      <br />
+      <code>:not()</code> and <code>:has()</code> Filters
+    </h1>
+
+    <hr />
+
+    <!-- FILTER SECTION -->
+    <div id="filter-container">
+      <!-- Brand -->
+      <select name="brand" id="brand">
+        <option value="">-- BRAND --</option>
+        <option value="adidas">Adidas</option>
+        <option value="nike">Nike</option>
+        <option value="puma">Puma</option>
+        <option value="reebok">Reebok</option>
+      </select>
+
+      <!-- Color -->
+      <select name="color" id="color">
+        <option value="">-- COLOR --</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+      </select>
+
+      <!-- Price -->
+      <select name="price" id="price">
+        <option value="">-- PRICE --</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <div id="products-container">
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/eddie-palmore-XwWGyrVidZE-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/black-and-white-adidas-sneakers-XwWGyrVidZE"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name adidas">Adidas</h2>
+        <ul class="product-info">
+          <li class="white"><i class="fa-solid fa-palette fa-lg"></i>White</li>
+          <li class="low">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;50.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/usama-akram-s-gYAbQToXk-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/black-and-white-nike-athletic-shoes-s-gYAbQToXk"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name nike">Nike</h2>
+        <ul class="product-info">
+          <li class="black"><i class="fa-solid fa-palette fa-lg"></i>Black</li>
+          <li class="medium">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;100.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/maria-fernanda-pissioli-VOpBKo48lq0-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/red-and-white-nike-athletic-shoes-VOpBKo48lq0"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name puma">Puma</h2>
+        <ul class="product-info">
+          <li class="red"><i class="fa-solid fa-palette fa-lg"></i>Red</li>
+          <li class="high">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;150.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/maureen-de-wit-cEot_30k978-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/person-carrying-white-reebok-low-top-sneakers-cEot_30k978"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name reebok">Reebok</h2>
+        <ul class="product-info">
+          <li class="white"><i class="fa-solid fa-palette fa-lg"></i>White</li>
+          <li class="low">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;50.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/grailify-4y_zTA_M35k-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/person-in-black-and-white-nike-athletic-shoes-4y_zTA_M35k"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name adidas">Adidas</h2>
+        <ul class="product-info">
+          <li class="black"><i class="fa-solid fa-palette fa-lg"></i>Black</li>
+          <li class="medium">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;100.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/jeff-tumale-SD9Jyl1xNQ4-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/a-person-wearing-a-hat-SD9Jyl1xNQ4"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name nike">Nike</h2>
+        <ul class="product-info">
+          <li class="white"><i class="fa-solid fa-palette fa-lg"></i>White</li>
+          <li class="low">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;50.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/ian-bevis-IJjfPInzmdk-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/pair-of-black-puma-suede-IJjfPInzmdk"
+            style="color: #000"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name puma">Puma</h2>
+        <ul class="product-info">
+          <li class="black"><i class="fa-solid fa-palette fa-lg"></i>Black</li>
+          <li class="medium">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;100.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/ben-iwara-oPPRa-u_Rwo-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/a-person-standing-on-top-of-a-white-box-oPPRa-u_Rwo"
+            style="color: #000"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name reebok">Reebok</h2>
+        <ul class="product-info">
+          <li class="black"><i class="fa-solid fa-palette fa-lg"></i>Black</li>
+          <li class="medium">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;100.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/grailify-ju4-jsQ8jmk-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/red-and-blue-nike-athletic-shoe-ju4-jsQ8jmk"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name adidas">Adidas</h2>
+        <ul class="product-info">
+          <li class="red"><i class="fa-solid fa-palette fa-lg"></i>Red</li>
+          <li class="high">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;150.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/domino-studio-164_6wVEHfI-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/unpaired-red-nike-sneaker-164_6wVEHfI"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name nike">Nike</h2>
+        <ul class="product-info">
+          <li class="red"><i class="fa-solid fa-palette fa-lg"></i>Red</li>
+          <li class="high">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;150.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+
+      <div class="product-card">
+        <img
+          class="product-image"
+          src="assets/images/the-dk-photography-NUoPWImmjCU-unsplash.jpg"
+          alt="Product Image"
+        />
+        <small class="image-source">
+          <a
+            href="https://unsplash.com/photos/white-nike-air-force-1-low-NUoPWImmjCU"
+            style="color: #fff"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image Source</a
+          >
+        </small>
+        <h2 class="brand-name puma">Puma</h2>
+        <ul class="product-info">
+          <li class="white"><i class="fa-solid fa-palette fa-lg"></i>White</li>
+          <li class="low">
+            <i class="fa-solid fa-money-bill-wave fa-lg"></i>&#36;50.00
+          </li>
+        </ul>
+        <button class="btn-cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-text">
+        <span>&copy; 2025 |</span>
+        <span>Oktay Acar</span>
+        <a
+          class="github-link"
+          href="https://github.com/oktay-acar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </p>
+      <a class="arrow-up" href="#">&#11165;</a>
+    </footer>
+  </body>
+</html>

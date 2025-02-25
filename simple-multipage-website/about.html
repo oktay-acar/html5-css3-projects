@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Oktay Acar" />
+    <title>Simple Multi-Page Website</title>
+
+    <!-- Font Awesome 6.7.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION SECTION -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active isDisabled">About</a>
+        <a href="products.html">Products</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section>
+      <h1>About</h1>
+      <p class="about-text">
+        In HTML code, when embedding content from another page, you can specify
+        the page's URL using the <code>src</code> attribute.
+      </p>
+      <p>For Example:</p>
+      <code
+        >&lt;iframe src=&quot;<span style="color: red">URL</span
+        >&quot;&gt;&lt;/iframe&gt;</code
+      >
+
+      <br />
+
+      <iframe
+        class="video-player"
+        src=""
+        title="Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-text">
+        <span>&copy; 2025 |</span>
+        <span>Oktay Acar</span>
+        <a
+          class="github-link"
+          href="https://github.com/oktay-acar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </p>
+      <a class="arrow-up" href="#">&#11165;</a>
+    </footer>
+  </body>
+</html>

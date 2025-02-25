@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-bg: #0038a8;
+  --secondary-bg: #416dc5;
+  --primary-text: #dae3f5;
+  --secondary-text: #5c94e2;
+  --border-color: #7898d8;
+
+  /* Box 7 Colors */
+  --box-7-1-bg: #295abb;
+  --box-7-2-bg: #5b82ce;
+  --box-7-3-bg: #96afe2;
+  --box-7-4-bg: #b7c8eb;
+
+  /* Footer */
+  --footer-bg: #212529;
+  --footer-primary-color: #f8f9fa;
+  --footer-secondary-color: #0d6efd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Poppins", Tahoma, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 0 min(8%, 30px);
+}
+
+/* GRID CONTAINER */
+/* -------------- */
+.grid-container {
+  display: grid;
+  gap: 10px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, minmax(75px, auto));
+  grid-template-areas:
+    "box-1 box-1 box-1 box-2 box-3 box-4 box-4"
+    "box-1 box-1 box-1 box-2 box-5 box-4 box-4"
+    "box-1 box-1 box-1 box-6 box-7 box-7 box-8"
+    "box-1 box-1 box-1 box-6 box-7 box-7 box-8"
+    "box-1 box-1 box-1 box-6 box-9 box-10 box-10"
+    "box-1 box-1 box-1 box-6 box-9 box-10 box-10"
+    "footer footer footer footer footer footer footer";
+}
+
+.box {
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+
+/* IMAGES (Box 2, 4, 6 ) */
+/* --------------------- */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ICONS (Box 3, 5) */
+/* ---------------- */
+#box-3 i,
+#box-5 i {
+  color: var(--primary-text);
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+#box-3 i:hover,
+#box-5 i:hover {
+  color: var(--secondary-text);
+  transform: scale(1.2);
+}
+
+/* BOX 1 */
+/* ----- */
+#box-1 {
+  grid-area: box-1;
+}
+
+#box-1 .page-title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+/* BOX 2 */
+/* ----- */
+#box-2 {
+  grid-area: box-2;
+  background-color: transparent;
+  border: none;
+}
+
+/* BOX 3 */
+/* ----- */
+#box-3 {
+  grid-area: box-3;
+  background-color: transparent;
+}
+
+/* BOX 4 */
+/* ----- */
+#box-4 {
+  grid-area: box-4;
+  background-color: transparent;
+  border: none;
+}
+
+/* BOX 5 */
+/* ----- */
+#box-5 {
+  grid-area: box-5;
+  background-color: transparent;
+}
+
+/* BOX 6 */
+/* ----- */
+#box-6 {
+  grid-area: box-6;
+  background-color: transparent;
+  border: none;
+}
+
+/* BOX 7 */
+/* ----- */
+#box-7 {
+  grid-area: box-7;
+  background-color: transparent;
+  border: none;
+}
+
+.box-7-1,
+.box-7-2,
+.box-7-3,
+.box-7-4 {
+  height: 100%;
+  width: 100%;
+}
+
+#box-7 .box-7-1 {
+  background-color: var(--box-7-1-bg);
+  border-radius: 50px 0 0;
+}
+
+#box-7 .box-7-2 {
+  background-color: var(--box-7-2-bg);
+}
+
+#box-7 .box-7-3 {
+  background-color: var(--box-7-3-bg);
+}
+
+#box-7 .box-7-4 {
+  background-color: var(--box-7-4-bg);
+  border-radius: 0 0 50px;
+}
+
+/* BOX 8 */
+/* ----- */
+#box-8 {
+  grid-area: box-8;
+  flex-direction: column;
+  text-align: center;
+}
+
+#box-8 .number-count,
+#box-8 .number-description {
+  padding: 10px;
+}
+
+/* BOX 9 */
+/* ----- */
+#box-9 {
+  grid-area: box-9;
+}
+
+#box-9 .cta-button {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: inherit;
+  font-weight: 600;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+#box-9 .cta-button:hover {
+  background-color: var(--primary-text);
+  color: var(--primary-bg);
+  transform: scale(1.1);
+}
+
+/* BOX 10 */
+/* ----- */
+#box-10 {
+  grid-area: box-10;
+  flex-direction: column;
+}
+
+#box-10 .product-title {
+  text-align: center;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+#box-10 .product-list {
+  padding: 0 0 10px;
+}
+
+/* FOOTER BOX */
+/* ---------- */
+#footer {
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  border: none;
+}
+
+.footer-content {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
+.footer-text {
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0 1em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-text span:nth-child(1) {
+  color: var(--footer-primary-color);
+  margin-right: 0.3em;
+}
+
+.footer-text span:nth-child(2) {
+  color: var(--footer-secondary-color);
+}
+
+.github-link,
+.arrow-up {
+  color: var(--footer-primary-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.github-link {
+  margin: 0 0.8em;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 1em;
+}
+
+.github-link:hover,
+.arrow-up:hover {
+  color: var(--footer-secondary-color);
+  transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  #box-1 .page-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Footer */
+  --footer-bg: #212529;
+  --footer-primary-color: #f8f9fa;
+  --footer-secondary-color: #0d6efd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Poppins", Tahoma, sans-serif;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin: 1em 0 0.5em;
+  text-align: center;
+}
+
+/* GRID CONTAINER */
+/* -------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+#position-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0 0 0.5em;
+  font-weight: 500;
+}
+
+/* BUTTON ANIMATIONS */
+/* ----------------- */
+#button-container {
+  background-color: rgb(193, 202, 222);
+}
+
+.btn {
+  border-radius: 0.5em;
+  border: none;
+  background: linear-gradient(45deg, #89cff0, #0096ff, #3067e7);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1em 3em;
+}
+
+/* Button Rotate 2D */
+.btn-rotate-2d:hover {
+  animation: button-rotate-2d 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-rotate-2d {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button Rotate 3D*/
+.btn-rotate-3d:hover {
+  animation: button-rotate-3d 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-rotate-3d {
+  0% {
+    /* transform: rotateX(0deg) rotateY(0deg); */
+    transform: none;
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Button Scale */
+.btn-scale:hover {
+  animation: button-scale 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button Rotate & Scale */
+.btn-rotate-scale:hover {
+  animation: button-rotate-scale 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* @keyframes button-rotate-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  40% {
+    transform: rotate(120deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(240deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+} */
+
+@keyframes button-rotate-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Button Slide Vertical */
+.btn-slide-vertical:hover {
+  animation: button-slide-vertical 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-slide-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button Skew */
+.btn-skew:hover {
+  animation: button-skew 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(15deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+/* Button Color Change */
+.btn-color-change:hover {
+  /* animation: button-color-change 1s ease-in-out infinite; */
+  animation: button-color-change 0.5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-color-change {
+  0% {
+    background: linear-gradient(45deg, #89cff0, #0096ff, #3067e7);
+  }
+  50% {
+    background: linear-gradient(45deg, #0096ff, #3067e7, #89cff0);
+  }
+  100% {
+    background: linear-gradient(45deg, #89cff0, #0096ff, #3067e7);
+  }
+}
+
+/* Button Opacity */
+.btn-opacity:hover {
+  animation: button-opacity 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes button-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* FOOTER */
+/* ------ */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--footer-bg);
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
+.footer-text {
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0 1em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-text span:nth-child(1) {
+  color: var(--footer-primary-color);
+  margin-right: 0.3em;
+}
+
+.footer-text span:nth-child(2) {
+  color: var(--footer-secondary-color);
+}
+
+.github-link,
+.arrow-up {
+  color: var(--footer-primary-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.github-link {
+  margin: 0 0.8em;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 1em;
+}
+
+.github-link:hover,
+.arrow-up:hover {
+  color: var(--footer-secondary-color);
+  transform: scale(1.4);
+}
+
+/* 
+animation
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+Shorthand
+---------
+animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state animation-timeline;
+
+Default Values
+--------------
+animation-name: none
+animation-duration: 0s
+animation-timing-function: ease
+animation-delay: 0s
+animation-iteration-count: 1
+animation-direction: normal
+animation-fill-mode: none
+animation-play-state: running
+animation-timeline: auto 
+*/

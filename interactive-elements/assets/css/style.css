@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Footer */
+  --footer-bg: #212529;
+  --footer-primary-color: #f8f9fa;
+  --footer-secondary-color: #0d6efd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Poppins", Tahoma, sans-serif;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin: 1em 0 0.5em;
+  text-align: center;
+}
+
+/* GRID CONTAINER */
+/* -------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+#position-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 0 0 0.5em;
+  font-weight: 500;
+}
+
+/* TEXT ANIMATION */
+/* -------------- */
+#oktay-acar {
+  background-color: #000;
+  color: #fff;
+}
+
+#oktay-acar h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 5px #13bbff, 0 0 10px #13bbff, 0 0 20px #13bbff,
+    0 0 40px #13bbff, 0 0 80px #13bbff;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #13bbff, 0 0 10px #13bbff, 0 0 20px #13bbff,
+      0 0 40px #13bbff, 0 0 80px #13bbff;
+  }
+  33% {
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14,
+      0 0 80px #39ff14, 0 0 160px #39ff14;
+  }
+  67% {
+    text-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a, 0 0 60px #ff073a,
+      0 0 120px #ff073a, 0 0 240px #ff073a;
+  }
+  100% {
+    text-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 80px #ffff00,
+      0 0 160px #ffff00, 0 0 320px #ffff00;
+  }
+}
+
+/* GRADIENT */
+/* -------- */
+#universe {
+  background-image: radial-gradient(#000 30%, white 31%, transparent 40%),
+    url("../images/pexels-francesco-ungaro-998641.jpg");
+  background-size: cover;
+  color: #fff;
+  transition: background-image 0.5s ease-in-out;
+}
+
+#universe:hover {
+  background-image: radial-gradient(
+      circle,
+      #ffcc00 30%,
+      #ff6600 40%,
+      #ff3300 50%,
+      transparent 60%
+    ),
+    url("../images/pexels-francesco-ungaro-998641.jpg");
+}
+
+div#universe a {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* BEFORE & AFTER */
+/* -------------- */
+code {
+  background-color: rgb(226, 237, 237);
+  padding: 0.2em;
+  border-radius: 7px;
+}
+
+#before-after {
+  background-color: rgb(249, 233, 153);
+}
+
+#before-after p {
+  margin-bottom: 1em;
+}
+
+#before-after p::before {
+  content: "This is the ";
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 7px;
+}
+
+#before-after p::after {
+  content: " element.";
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 7px;
+}
+
+#before-after h1 {
+  position: relative;
+  width: max-content;
+  margin-bottom: 15px;
+}
+
+#before-after h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+#before-after h1:hover::after {
+  width: 0;
+}
+
+#before-after h1:hover {
+  cursor: pointer;
+}
+
+#before-after h2 {
+  position: relative;
+}
+
+#before-after h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 7px;
+  width: 0%;
+  background-color: #000;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+#before-after h2:hover::after {
+  width: 100%;
+}
+
+#before-after h2:hover {
+  cursor: pointer;
+}
+
+/* ROTATE & SCALE */
+/* -------------- */
+#rotate {
+  background-color: rgb(194, 218, 184);
+}
+
+.element {
+  background-color: rgb(75, 75, 255);
+  width: 250px;
+  height: 250px;
+  align-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  /* 
+  animation-name: rotating;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running; 
+  */
+
+  /* Shorthand */
+  animation: rotating 3s linear 0.5s infinite alternate running;
+}
+
+.element:hover {
+  animation-play-state: paused;
+  background-color: rgb(255, 75, 75);
+  cursor: pointer;
+}
+
+@keyframes rotating {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(0) scale(1.1);
+    border-radius: 0;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+    border-radius: 50%;
+  }
+}
+
+/* SPINNER */
+/* ------- */
+#spin {
+  background-color: #000;
+  color: #fff;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 7px solid #39ff14;
+  border-radius: 7px;
+  box-shadow: 0 0 8px #39ff14, 0 0 8px #39ff14 inset;
+  animation: spinner 1.8s ease-in-out infinite;
+}
+
+@keyframes spinner {
+  0% {
+    /* transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); */
+    transform: none;
+  }
+  33% {
+    transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+  }
+  67% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
+
+/* BORDER ANIMATION */
+/* ---------------- */
+#border-animation {
+  background-color: #3e4a59;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.border-box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+@property --animate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.border-box::before,
+.border-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+
+  background: conic-gradient(
+    from var(--animate),
+    #00bcd4,
+    #03a9f4,
+    #0288d1,
+    #01579b,
+    #00bcd4
+  );
+  animation: border-animation 3s linear infinite;
+}
+
+.border-box::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes border-animation {
+  from {
+    --animate: 0deg;
+  }
+  to {
+    --animate: 360deg;
+  }
+}
+
+/* FOOTER */
+/* ------ */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--footer-bg);
+  width: 100%;
+  padding: 0.5em 1em;
+  z-index: 3;
+}
+
+.footer-text {
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0 1em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-text span:nth-child(1) {
+  color: var(--footer-primary-color);
+  margin-right: 0.3em;
+}
+
+.footer-text span:nth-child(2) {
+  color: var(--footer-secondary-color);
+}
+
+.github-link,
+.arrow-up {
+  color: var(--footer-primary-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.github-link {
+  margin: 0 0.8em;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 1em;
+}
+
+.github-link:hover,
+.arrow-up:hover {
+  color: var(--footer-secondary-color);
+  transform: scale(1.4);
+}
+
+/* 
+animation
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+Shorthand
+---------
+animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state animation-timeline;
+
+Default Values
+--------------
+animation-name: none
+animation-duration: 0s
+animation-timing-function: ease
+animation-delay: 0s
+animation-iteration-count: 1
+animation-direction: normal
+animation-fill-mode: none
+animation-play-state: running
+animation-timeline: auto 
+*/
