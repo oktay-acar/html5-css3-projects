@@ -284,7 +284,7 @@ body {
 .github-link:hover,
 .arrow-up:hover {
   color: var(--footer-secondary-color);
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
 
 /* MEDIA QUERIES */
@@ -337,6 +337,6 @@ body {
 
   .github-link,
   .arrow-up {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }

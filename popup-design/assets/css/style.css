@@ -127,5 +127,5 @@ footer {
 .github-link:hover,
 .arrow-up:hover {
   color: var(--footer-secondary-color);
-  transform: scale(1.4);
+  transform: scale(1.3);
 }

@@ -1,6 +1,6 @@
-# HTML5 & CSS3 Projects
+# 🗂️ HTML5 & CSS3 Projects
 
-## Description
+## 📝 Description
 
 This repository contains a collection of simple HTML and CSS projects that explore various web design concepts and layout techniques.
 
@@ -10,7 +10,7 @@ The projects are implemented using my own unique approaches and methods.
 
 ---
 
-## Projects Included
+## 🗃️ Projects Included
 
 1. **Flexbox Card Layout**
 
@@ -64,12 +64,12 @@ The projects are implemented using my own unique approaches and methods.
 
 ---
 
-## License
+## 📄 License
 
 This repository is licensed under the [MIT License](https://github.com/oktay-acar/html5-css3-projects/blob/main/LICENSE).
 
 ---
 
-## Author
+## 👨🏻‍💻 Author
 
-[Oktay Acar](https://github.com/oktay-acar)
+Created with ❤️ by **[Oktay Acar](https://github.com/oktay-acar)**, 2025.

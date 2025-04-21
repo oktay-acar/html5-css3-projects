@@ -33,7 +33,7 @@ section {
 /* -------------- */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 30px;
   justify-items: center;
@@ -45,8 +45,10 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 300px;
+  max-width: 400px;
+  padding: 1rem;
   position: relative;
 }
 
@@ -93,7 +95,7 @@ section {
   }
 }
 
-/* Button Rotate 3D*/
+/* Button Rotate 3D */
 .btn-rotate-3d:hover {
   animation: button-rotate-3d 1s ease-in-out infinite;
   cursor: pointer;
@@ -201,7 +203,6 @@ section {
 
 /* Button Color Change */
 .btn-color-change:hover {
-  /* animation: button-color-change 1s ease-in-out infinite; */
   animation: button-color-change 0.5s ease-in-out infinite;
   cursor: pointer;
 }
@@ -287,7 +288,17 @@ footer {
 .github-link:hover,
 .arrow-up:hover {
   color: var(--footer-secondary-color);
-  transform: scale(1.4);
+  transform: scale(1.3);
+}
+
+/* MEDIA QUERIES */
+/* ------------- */
+@media (max-width: 768px) {
+  /* Grid Container */
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
 
 /* 
