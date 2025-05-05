@@ -63,6 +63,7 @@ section {
 /* TEXT ANIMATION */
 /* -------------- */
 #oktay-acar {
+  text-align: center;
   background-color: #000;
   color: #fff;
 }
@@ -135,11 +136,13 @@ code {
 }
 
 #before-after {
+  text-align: center;
   background-color: rgb(249, 233, 153);
 }
 
 #before-after p {
   margin-bottom: 1em;
+  font-size: 1rem;
 }
 
 #before-after p::before {
@@ -158,7 +161,7 @@ code {
 
 #before-after h1 {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   width: max-content;
   margin-bottom: 15px;
 }
@@ -185,7 +188,7 @@ code {
 
 #before-after h2 {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5;
 }
 
 #before-after h2::after {
@@ -220,7 +223,6 @@ code {
   background-color: rgb(75, 75, 255);
   width: 200px;
   height: 200px;
-
   align-content: center;
   text-align: center;
   color: #fff;
@@ -442,15 +444,6 @@ footer {
         transparent 50%
       ),
       url("../images/pexels-francesco-ungaro-998641.jpg");
-  }
-
-  /* Before & After */
-  #before-after h1 {
-    font-size: 1.125rem;
-  }
-
-  #before-after h2 {
-    font-size: 1.5rem;
   }
 
   /* Rotate & Scale */
